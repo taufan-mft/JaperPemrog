@@ -1,5 +1,6 @@
 Public class Form1
 
+  
   Dim productCode As integer
   dim productName As Strings
   Dim demandRate As integer
@@ -40,7 +41,7 @@ Public class Form1
           txtProductName.Text = " "
           txtEPQ.Text=" "
           txtTotalCost = " "
-
+  'written by taufan_mft. licensed under public domain
           jumlah_anjing = jumlah_anjing + 1
 
         End If
