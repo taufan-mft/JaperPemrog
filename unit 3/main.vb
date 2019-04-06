@@ -35,7 +35,7 @@ Public Class Form 1
         harga2= 0.55
       End Case
       hargaMinuman = harga2 * jumlahMinuman
-
+'written by taufan_mft. licensed under public domain
       Select case hargaMinuman
         Case Is < 10
           diskon = 0
