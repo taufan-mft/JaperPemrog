@@ -35,7 +35,8 @@ Public Class Form1
         End Select
         hargaMinuman = harga2 * jumlahMinuman
         'written by taufan_mft. licensed under public domain
-        Select Case hargaMinuman
+        fuckinghartot = hargaMakan + hargaMinuman
+        Select Case fuckinghartot
             Case Is < 10
                 diskon = 0
             Case 10 To 20
