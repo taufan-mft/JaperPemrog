@@ -1,65 +1,68 @@
-Public class Form1
-
-  
-  Dim productCode As integer
-  dim productName As Strings
-  Dim demandRate As integer
-  Dim productionRate As integer
-  Dim holdingCost As integer
-  dim SetupCost As Integer
-  Dim EPQ As Double
-  Dim totalCost As Double
-  Dim indexngentot As Byte = 0
-  Private jumlah_ngentot As Byte = 5
-  Dim ngentot(5,4) As String
+Public Class Form1
 
 
-    Private Sub btnCount_Click(ByVal sender As System.Object, Byval e As System.EventArgs) Handles btnCount.Click
-      SetupCost = txtSetupCost.Text
-      demandRate = txt.DemandRate.Text
-      productionRate = txtProductionRate.Text
-      holdingCost = txtHoldingCost.Text
+    Dim productCode As Integer
+    Dim productNam As String
+    Dim demandRate As Integer
+    Dim productionRate As Integer
+    Dim holdingCost As Integer
+    Dim SetupCost As Integer
+    Dim EPQ As Double
+    Dim totalCost As Double
+    Dim jumlah_Alma As Byte = 0
+    Private jumlah_Lily As Byte = 5
+    Dim caca(5, 4) As String
 
-      EPQ = (((2*SetupCost*demandRate)/holdingCost)*(productionRate/(productionRate-demandRate)))^0.5
 
-      totalCost = ((1-(demandRate/EPQ))*SetupCost) + (1-(demandRate/productionRate)) * ((EPQ/2)*holdingCost)
-      txtEPQ.Text = EPQ
-      txtTotalCost.Text = totalCost
+    Private Sub btnCount_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCount.Click
+        SetupCost = txtSetupCost.Text
+        demandRate = txtDemandRate.Text
+        productionRate = txtProductionRate.Text
+        holdingCost = txtHoldingCost.Text
 
-      Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.btnNew_Click
+        EPQ = (((2 * SetupCost * demandRate) / holdingCost) * (productionRate / (productionRate - demandRate))) ^ 0.5
+
+        totalCost = ((1 - (demandRate / EPQ)) * SetupCost) + (1 - (demandRate / productionRate)) * ((EPQ / 2) * holdingCost)
+        txtEPQ.Text = EPQ
+        txtTotalCost.Text = totalCost
+    End Sub
+
+
+    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
         productCode = txtProductCode.Text
-        productName = txtProductName.Text
-        If jumlah_anjing > jumlah_ngentot - 1 Then
-          MsgBox("List sudah penuh")
+        productNam = txtProductName.Text
+        If jumlah_Alma > jumlah_Lily - 1 Then
+            MsgBox("List sudah penuh")
 
-        else
-          ngentot(jumlah_anjing, 0) = productCode
-          ngentot(jumlah_anjing, 1) = productName
-          ngentot(jumlah_anjing, 2) = EPQ
-          ngentot(jumlah_anjing, 3) = totalCost
-          txtProductCode.Text = " "
-          txtProductName.Text = " "
-          txtEPQ.Text=" "
-          txtTotalCost = " "
-  'written by taufan_mft. licensed under public domain
-          jumlah_anjing = jumlah_anjing + 1
+        Else
+            caca(jumlah_Alma, 0) = productCode
+            caca(jumlah_Alma, 1) = productNam
+            caca(jumlah_Alma, 2) = EPQ
+            caca(jumlah_Alma, 3) = totalCost
+            txtProductCode.Text = " "
+            txtProductName.Text = " "
+            txtEPQ.Text = " "
+            txtTotalCost.Text = " "
+            'written by taufan_mft. licensed under public domain
+            jumlah_Alma = jumlah_Alma + 1
 
         End If
-      ENd Sub
+    End Sub
 
-      Private Sub btnLihatData_Click(ByVal sender As System.Object, byVal e As System.EventArgs) Handles btnLihatData.btnNew_Click
-        Dim i As byte
-        If jumlah_anjing >0 Then
-          Listbox1.Items.Clear()
-          Listbox2.Items.Clear()
-          Listbox3.Items.Clear()
-          Listbox4.Items.Clear()
+    Private Sub btnLihatData_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLihatData.Click
+        Dim i As Byte
+        If jumlah_Alma > 0 Then
+            ListBox1.Items.Clear()
+            ListBox2.Items.Clear()
+            ListBox3.Items.Clear()
+            ListBox4.Items.Clear()
 
-          For i = 0 To jumlah_anjing - 1
-            Listbox1.Items.Add(ngentot(i,0))
-            Listbox2.Items.Add(ngentot(i, 1))
-            Listbox3.Items.Add(ngentot(i, 2))
-            Listbox4.Items.Add(ngentot(i, 3))
-          Next
+            For i = 0 To jumlah_Alma - 1
+                ListBox1.Items.Add(caca(i, 0))
+                ListBox2.Items.Add(caca(i, 1))
+                ListBox3.Items.Add(caca(i, 2))
+                ListBox4.Items.Add(caca(i, 3))
+            Next
         End If
-      End Sub
+    End Sub
+End Class
