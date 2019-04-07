@@ -54,7 +54,7 @@ Public Class Form1
         txthargaMinuman.Text = "$ " & hargaMinuman
         txtHargaAsli.Text = "$ " & fuckinghartot
         txtDiskon.Text = (diskon * 100) & " %"
-        txtFuckinHartot.Text = "$ " & fuckinghartot
+        txtFuckinHartot.Text = "$ " & hargaTotal
 
     End Sub
 
