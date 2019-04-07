@@ -3,6 +3,5 @@ Bantuin gue flowchart dan lain lain ya
 
 
 ------------------------
-Liat diatas ada folder, tiap unit punya folder sendiri
-------------------------
-Buat yang ngambil PB gue, kalo lu liat source code ini berarti lu dosa, fix
+Project Awetan
+Mari kita bersama sama membuat awetan laporan praktikum kita, agar kelak mendapat amal jariah yang dapat menolong kita semua. Kuy sumbangkan ke laprak@hmti-unsoed.org
